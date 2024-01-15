@@ -1,3 +1,11 @@
+//ES5
+const Carr = function (make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+};
+const car1 = new Carr("Lambo", "Huracan", "2019");
+console.log(car1);
 //ES6 Syntax for constructors
 
 class Vehicle {
@@ -29,8 +37,9 @@ class Car extends Vehicle {
   }
 }
 class Truck extends Vehicle {
-  constructor(make, model, year, type) {
+  constructor(make, model, year, tires, type) {
     super(make, model, year, type || "Truck");
+    this.tires = tires;
   }
 }
 
@@ -41,7 +50,7 @@ console.log(ToyotaSupra);
 const NissanGTR = new Car("Nissan", "SkylineGTR R34", "2002", 280, "SuperCar");
 console.log(NissanGTR);
 
-const truck1 = new Truck("Truck", "Sky", "2003");
+const truck1 = new Truck("Truck", "Sky", "2003", "OffRoad");
 console.log(truck1);
 
 class Driver {
